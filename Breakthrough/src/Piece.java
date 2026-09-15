@@ -1,22 +1,26 @@
 
 public enum Piece {
-	EMPTY(0),
-	BLACK(2),
-	RED(4);
+	EMPTY, //EMPTY(0)
+	BLACK, //BLACK(2)
+	RED; //RED(4)
 	
-	private final int serverValue;
+	//private final int serverValue;
 	
-	Piece(int serverValue) {
-		this.serverValue = serverValue;
+	/*
+	Piece(int sv) {
+		this.serverValue = sv;
 	}
+	*/
 	
+	/*
 	public int toServerValue() {
 		return this.serverValue;
 	}
+	*/
 	
-	public static Piece fromServerValue(int v) {
-		if (v == 2) return BLACK;
-		if (v == 4) return RED;
+	public static Piece fromServerValue(int value) {
+		if (value == 2) return BLACK;
+		if (value == 4) return RED;
 		return EMPTY;
 	}
 	
